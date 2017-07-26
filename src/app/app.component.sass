@@ -57,7 +57,7 @@
 
     .auth__container__list
       .auth__container__item
-        margin-bottom: 5px
+        margin-bottom: 10px
         .auth__container__item_img
           vertical-align: bottom
           width: 7%
@@ -68,9 +68,24 @@
           width: 90%
           border: 1px solid #ededed
           height: 30px
+          background-image: linear-gradient(#f2f2f2, #f2f2f2), linear-gradient(to bottom, #000000, #ffffff)
         .auth__container__item_button
-          @include border-radius(10px)
+          @include border-radius(25px)
           width: 50%
           height: 40px
+          box-shadow: 0px 5px 13px 0 rgba(15, 171, 75, 0.35)
+          background: #24934f
+          border: none
+          text-transform: uppercase
+          color: #ffffff
+          font-weight: bold
+          font-size: 18px
+          font-family: Roboto, sans-serif
+
+        //.auth__container__item_link
+
+      .auth__container__item:nth-child(2)
+        margin-bottom: 15px
+
 
 
