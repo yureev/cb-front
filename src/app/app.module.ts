@@ -6,6 +6,7 @@ import {FormsModule, NgForm} from "@angular/forms";
 import { AppComponent } from './app.component';
 import { AuthComponent } from './auth/auth.component';
 import { RoleComponent } from './role/role.component';
+import { TestComponent } from './test/test.component';
 
 // определение маршрутов
 const appRoutes: Routes = [
@@ -17,7 +18,7 @@ const appRoutes: Routes = [
 
 @NgModule({
   imports:      [ BrowserModule, RouterModule.forRoot(appRoutes), FormsModule],
-  declarations: [ AppComponent, AuthComponent, RoleComponent],
+  declarations: [ AppComponent, AuthComponent, RoleComponent, TestComponent],
   bootstrap:    [ AppComponent ],
   providers: []
 })
