@@ -1,0 +1,76 @@
+@mixin clearfix()
+  &:before, &:after
+    content: ""
+    display: table
+
+  &:after
+    clear: both
+
+@mixin placeholder($color: #000000)
+  &::-webkit-input-placeholder
+    color: $color
+  &:-moz-placeholder
+    color: $color
+  &::-moz-placeholder
+    color: $color
+  &:-ms-input-placeholder
+    color: $color
+
+@mixin border-radius($radius)
+  -webkit-border-radius: $radius
+  -moz-border-radius: $radius
+  -ms-border-radius: $radius
+  border-radius: $radius
+
+.auth:before
+  content: ''
+  display: inline-block
+  height: 100%
+  vertical-align: middle
+
+.auth
+  width: 100%
+  height: 100%
+  background: url("./../assets/image/background_auth.png")
+  text-align: center
+
+  .auth__container
+    background: #ffffff
+    width: 352px
+    padding: 10px 25px
+    text-align: center
+    box-shadow: 0px 8px 18px 0 rgba(168, 175, 170, 0.71)
+    border: 3px solid #e7dddf
+    @include border-radius(10px)
+    display: inline-block
+    vertical-align: middle
+
+    .auth__container__logo
+      text-align: center
+      margin-bottom: 20px
+
+    .auth__container__text
+      font-weight: 700
+      border-bottom: 1px solid #ededed
+      margin-bottom: 10px
+      padding-bottom: 5px
+
+    .auth__container__list
+      .auth__container__item
+        margin-bottom: 5px
+        .auth__container__item_img
+          vertical-align: bottom
+          width: 7%
+        .auth__container__item_login, .auth__container__item_pass
+          @include border-radius(4px)
+          font-size: 11px
+          padding: 5px
+          width: 90%
+          border: 1px solid #ededed
+          height: 30px
+        .auth__container__item_button
+          @include border-radius(10px)
+          width: 50%
+          height: 40px
+
+
