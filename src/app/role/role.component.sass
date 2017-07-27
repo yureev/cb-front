@@ -1,0 +1,101 @@
+@import "./../../assets/variables"
+.role
+  width: 100%
+  height: 100%
+
+  .role__header:before
+    content: ''
+    display: inline-block
+    height: 100%
+    vertical-align: middle
+
+  .role__header
+    @include clearfix()
+    padding: 10px
+
+    .role__header__logo
+      float: left
+      width: 20%
+      display: inline-block
+      vertical-align: middle
+      .role__header__logo_img
+        width: 100%
+        max-width: 218px
+
+    .role__header__logo__search:before
+      content: ''
+      display: inline-block
+      height: 100%
+      vertical-align: middle
+
+    .role__header__logo__search
+      float: left
+      width: 80%
+      display: inline-block
+      vertical-align: middle
+      position: relative
+      padding: 0 30px
+
+      .role__header__logo__search_input
+        width: 100%
+        //display: inline-block
+        //vertical-align: middle
+        position: relative
+        height: 30px
+        padding: 0 40px 0 10px
+        background: #f2f2f2
+        font-size: 14px
+        border: 1px solid #e3e3e3
+        @include border-radius(4px)
+
+      .role__header__logo__search__submit
+        position: absolute
+        top: 56%
+        right: 30px
+        color: #0fab4b
+        font-size: 12px
+        border-left: 1px solid #e3e3e3
+        padding: 0 5px
+
+      .role__header__logo__search__submit:before
+        content: ''
+        position: absolute /* Абсолютное позиционирование */
+        left: -18px
+        bottom: -3px /* Положение треугольника */
+        border: 6px solid transparent /* Прозрачные границы */
+        border-top: 6px solid #4a4a4a /* Добавляем треугольник */
+
+  .role__container
+
+    .role__container__aside
+      width: 20%
+      border-top: 2px solid #ce1613
+
+      .role__container__aside__id
+        text-align: center
+        margin: 10px 15px 0
+        border-bottom: 1px solid #dfdfdf
+
+        .role__container__aside__id__up
+          text-align: left
+          @include clearfix()
+
+          .role__container__aside__id__up_photo
+            width: 48px
+            height: 48px
+            @include border-radius(24px)
+            background-color: red
+            float: left
+
+          .role__container__aside__id__up_name
+            font-size: 13px
+            height: 48px
+
+
+        .role__container__aside__id_button
+          @include border-radius(4px)
+          border: 1px solid #ce1613
+          color: #ce1613
+          background: #ffffff
+
+
