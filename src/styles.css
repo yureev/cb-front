@@ -30,4 +30,8 @@ a {
 input {
   font-family: Roboto, sans-serif; }
 
+button {
+  font-family: Roboto, sans-serif;
+  border: none; }
+
 /*# sourceMappingURL=styles.css.map */

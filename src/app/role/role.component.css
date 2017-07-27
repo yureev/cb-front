@@ -62,9 +62,9 @@
         border-top: 6px solid #4a4a4a; }
   .role .role__container .role__container__aside {
     width: 20%;
-    border-top: 2px solid #ce1613; }
+    border-top: 2px solid #ce1613;
+    text-align: center; }
     .role .role__container .role__container__aside .role__container__aside__id {
-      text-align: center;
       margin: 10px 15px 0;
       border-bottom: 1px solid #dfdfdf; }
       .role .role__container .role__container__aside .role__container__aside__id .role__container__aside__id__up {
@@ -82,10 +82,19 @@
           -ms-border-radius: 24px;
           border-radius: 24px;
           background-color: red;
+          margin-right: 5px;
           float: left; }
-        .role .role__container .role__container__aside .role__container__aside__id .role__container__aside__id__up .role__container__aside__id__up_name {
+        .role .role__container .role__container__aside .role__container__aside__id .role__container__aside__id__up .role__container__aside__id__up__name {
           font-size: 13px;
-          height: 48px; }
+          line-height: 48px;
+          height: 48px;
+          text-align: center; }
+          .role .role__container .role__container__aside .role__container__aside__id .role__container__aside__id__up .role__container__aside__id__up__name .role__container__aside__id__up__name_text {
+            display: inline-block;
+            vertical-align: middle;
+            white-space: nowrap;
+            overflow: hidden;
+            line-height: normal; }
       .role .role__container .role__container__aside .role__container__aside__id .role__container__aside__id_button {
         -webkit-border-radius: 4px;
         -moz-border-radius: 4px;
@@ -94,5 +103,25 @@
         border: 1px solid #ce1613;
         color: #ce1613;
         background: #ffffff; }
+    .role .role__container .role__container__aside .role__container__aside_button {
+      height: 40px;
+      background: #419562;
+      color: #ffffff;
+      font-size: 18px;
+      font-weight: bold;
+      box-shadow: 0px 5px 13px 0 rgba(15, 171, 75, 0.35);
+      -webkit-border-radius: 20px;
+      -moz-border-radius: 20px;
+      -ms-border-radius: 20px;
+      border-radius: 20px;
+      margin: 10px 0; }
+    .role .role__container .role__container__aside .role__container__aside__list {
+      padding: 10px; }
+      .role .role__container .role__container__aside .role__container__aside__list .role__container__aside__item .role__container__aside__item_icon {
+        background: url("./../../assets/image/archive.png") no-repeat;
+        height: 25px;
+        width: 25px;
+        float: left;
+        background-position: 0 -295px; }
 
 /*# sourceMappingURL=role.component.css.map */
