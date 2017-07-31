@@ -60,13 +60,20 @@
         bottom: -3px;
         border: 6px solid transparent;
         border-top: 6px solid #4a4a4a; }
+  .role .role__container:before, .role .role__container:after {
+    content: "";
+    display: table; }
+  .role .role__container:after {
+    clear: both; }
   .role .role__container .role__container__aside {
     width: 20%;
     border-top: 2px solid #ce1613;
-    text-align: center; }
+    text-align: center;
+    float: left; }
     .role .role__container .role__container__aside .role__container__aside__id {
       margin: 10px 15px 0;
-      border-bottom: 1px solid #dfdfdf; }
+      border-bottom: 1px solid #dfdfdf;
+      padding-bottom: 15px; }
       .role .role__container .role__container__aside .role__container__aside__id .role__container__aside__id__up {
         text-align: left; }
         .role .role__container .role__container__aside .role__container__aside__id .role__container__aside__id__up:before, .role .role__container .role__container__aside .role__container__aside__id .role__container__aside__id__up:after {
@@ -96,32 +103,106 @@
             overflow: hidden;
             line-height: normal; }
       .role .role__container .role__container__aside .role__container__aside__id .role__container__aside__id_button {
-        -webkit-border-radius: 4px;
-        -moz-border-radius: 4px;
-        -ms-border-radius: 4px;
-        border-radius: 4px;
+        -webkit-border-radius: 12px;
+        -moz-border-radius: 12px;
+        -ms-border-radius: 12px;
+        border-radius: 12px;
         border: 1px solid #ce1613;
         color: #ce1613;
-        background: #ffffff; }
+        background: #ffffff;
+        width: 70px; }
     .role .role__container .role__container__aside .role__container__aside_button {
       height: 40px;
       background: #419562;
       color: #ffffff;
       font-size: 18px;
       font-weight: bold;
-      box-shadow: 0px 5px 13px 0 rgba(15, 171, 75, 0.35);
+      box-shadow: 0 5px 13px 0 rgba(15, 171, 75, 0.35);
       -webkit-border-radius: 20px;
       -moz-border-radius: 20px;
       -ms-border-radius: 20px;
       border-radius: 20px;
       margin: 10px 0; }
     .role .role__container .role__container__aside .role__container__aside__list {
-      padding: 10px; }
-      .role .role__container .role__container__aside .role__container__aside__list .role__container__aside__item .role__container__aside__item_icon {
-        background: url("./../../assets/image/archive.png") no-repeat;
-        height: 25px;
-        width: 25px;
-        float: left;
-        background-position: 0 -295px; }
+      padding: 10px 0; }
+      .role .role__container .role__container__aside .role__container__aside__list .role__container__aside__item:hover {
+        border-left: 4px solid red;
+        box-shadow: 0px 8px 57px 0 rgba(210, 210, 210, 0.49); }
+      .role .role__container .role__container__aside .role__container__aside__list .role__container__aside__item:hover:after {
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 15px;
+        border: 10px solid transparent;
+        border-right: 10px solid #ededed; }
+      .role .role__container .role__container__aside .role__container__aside__list .role__container__aside__item {
+        height: 50px;
+        text-align: left;
+        padding: 10px 20px;
+        position: relative; }
+        .role .role__container .role__container__aside .role__container__aside__list .role__container__aside__item div {
+          height: 25px;
+          width: 25px;
+          float: left;
+          margin-right: 10px; }
+        .role .role__container .role__container__aside .role__container__aside__list .role__container__aside__item .role__container__aside__item_icon_work {
+          background: url("./../../assets/image/archive.png") no-repeat 0 0px; }
+        .role .role__container .role__container__aside .role__container__aside__list .role__container__aside__item .role__container__aside__item_icon_send {
+          background: url("./../../assets/image/archive.png") no-repeat 0 -47px; }
+        .role .role__container .role__container__aside .role__container__aside__list .role__container__aside__item .role__container__aside__item_icon_returnme {
+          background: url("./../../assets/image/archive.png") no-repeat 0 -97px; }
+        .role .role__container .role__container__aside .role__container__aside__list .role__container__aside__item .role__container__aside__item_icon_returnbyme {
+          background: url("./../../assets/image/archive.png") no-repeat 0 -147px; }
+        .role .role__container .role__container__aside .role__container__aside__list .role__container__aside__item .role__container__aside__item_icon_ok {
+          background: url("./../../assets/image/archive.png") no-repeat 0 -195px; }
+        .role .role__container .role__container__aside .role__container__aside__list .role__container__aside__item .role__container__aside__item_icon_cancel {
+          background: url("./../../assets/image/archive.png") no-repeat 0 -245px; }
+        .role .role__container .role__container__aside .role__container__aside__list .role__container__aside__item .role__container__aside__item_icon_archive {
+          background: url("./../../assets/image/archive.png") no-repeat 0 -295px; }
+        .role .role__container .role__container__aside .role__container__aside__list .role__container__aside__item .role__container__aside__item_icon_control {
+          background: url("./../../assets/image/archive.png") no-repeat 0 -343px; }
+        .role .role__container .role__container__aside .role__container__aside__list .role__container__aside__item .role__container__aside__item_icon_verification {
+          background: url("./../../assets/image/archive.png") no-repeat 0 -390px; }
+        .role .role__container .role__container__aside .role__container__aside__list .role__container__aside__item .role__container__aside__item_icon_consideration {
+          background: url("./../../assets/image/archive.png") no-repeat 0 -440px; }
+        .role .role__container .role__container__aside .role__container__aside__list .role__container__aside__item .role__container__aside__item_text {
+          text-transform: uppercase;
+          font-size: 14px;
+          color: #4c4c4c; }
+  .role .role__container .role__container__main {
+    border: 15px solid #ededed;
+    padding: 15px 8px;
+    width: 80%;
+    float: right; }
+    .role .role__container .role__container__main .main__table {
+      table-layout: auto;
+      width: 100%;
+      border-collapse: collapse; }
+      .role .role__container .role__container__main .main__table .main__table__head tr {
+        font-size: 12px;
+        font-weight: bold;
+        border: 1px solid #e1e1e1; }
+        .role .role__container .role__container__main .main__table .main__table__head tr .main__table__head__th {
+          border: 1px solid #e1e1e1;
+          padding: 25px 15px; }
+          .role .role__container .role__container__main .main__table .main__table__head tr .main__table__head__th span:after {
+            content: "";
+            position: absolute;
+            left: -10px;
+            top: 40%;
+            border: 5px solid transparent;
+            border-top: 5px solid #419562; }
+          .role .role__container .role__container__main .main__table .main__table__head tr .main__table__head__th span {
+            position: relative; }
+      .role .role__container .role__container__main .main__table .main__table__body tr:hover {
+        box-shadow: 0 9px 7px 0 rgba(0, 81, 31, 0.35); }
+      .role .role__container .role__container__main .main__table .main__table__body tr {
+        background-color: #fbdddc;
+        font-size: 13px;
+        text-align: center;
+        opacity: 0.57; }
+        .role .role__container .role__container__main .main__table .main__table__body tr .main__table__body_td {
+          padding: 25px 15px;
+          border-bottom: 1px solid #dee1e2; }
 
 /*# sourceMappingURL=role.component.css.map */
