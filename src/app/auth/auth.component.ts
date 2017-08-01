@@ -1,34 +1,26 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpService} from './http.service';
 import { NgForm} from '@angular/forms';
-import {AuthService} from "./auth.service";
+import {AuthService} from './auth.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-auth',
   templateUrl: './auth.component.html',
   styleUrls: ['./auth.component.sass'],
-  providers: [HttpService, AuthService]
+  providers: [ AuthService]
 })
 export class AuthComponent {
 
-  constructor(private authService: AuthService) {}
+  constructor(private authService: AuthService, private router: Router) {}
   onSubmit( form: NgForm) {
-    this.authService.getAuth(form.value.authLogin, form.value.authPass);
-}
+    console.log('NgForm', form.value.authLogin, form.value.authPass);
+    this.authService.userAuth(form.value.authLogin, form.value.authPass);
+  }
 
+  goRole() {
 
-  // onSubmit(form: NgForm) {
-  //   this.httpService.postData( {"username" : form.value.authLogin, "password" : form.value.authPass } )
-  //     .subscribe((data) => {
-  //     if (data.token.access_token) {
-  //       this.authTrue = true;
-  //     } else {
-  //       this.authTrue = false;
-  //     }
-  //       console.log(this.authTrue);
-  //   });
-  // }
-
+    this.router.navigate(['/role']);
+  }
 }
 
 

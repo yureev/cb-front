@@ -8,6 +8,8 @@ import { AuthComponent } from './auth/auth.component';
 import { RoleComponent } from './role/role.component';
 import { AuthGuard } from './auth/auth.guard';
 import {HttpModule} from "@angular/http";
+import {AuthService} from "./auth/auth.service";
+import {HttpService} from "./auth/http.service";
 
 // определение маршрутов
 const appRoutes: Routes = [
@@ -18,9 +20,9 @@ const appRoutes: Routes = [
 ];
 
 @NgModule({
-  imports:      [ BrowserModule, RouterModule.forRoot(appRoutes), FormsModule, HttpModule],
-  declarations: [ AppComponent, AuthComponent, RoleComponent],
+  imports:      [ BrowserModule, RouterModule.forRoot(appRoutes), FormsModule, HttpModule ],
+  declarations: [ AppComponent, AuthComponent, RoleComponent ],
   bootstrap:    [ AppComponent ],
-  providers: [AuthGuard]
+  providers:    [ AuthGuard, AuthService, HttpService ]
 })
 export class AppModule { }

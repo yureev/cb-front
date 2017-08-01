@@ -18,7 +18,7 @@
           <input type="password" class="auth__container__item_pass" placeholder="Пароль" ngModel name="authPass" required />
         </li>
         <li class="auth__container__item">
-          <input type="submit" [disabled]="authForm.invalid" routerLink="/role" class="auth__container__item_submit" value="Вхід" />
+          <input type="submit" [disabled]="authForm.invalid" (click)="goRole()" class="auth__container__item_submit" value="Вхід" />
         </li>
         <li class="auth__container__item">
           <a href="#" class="auth__container__item_link">Забули пароль?</a>

@@ -12,7 +12,7 @@ export class HttpService {
 
   constructor(private http: Http) { }
 
-  postData(obj: AuthUser){
+  postData(obj: AuthUser) {
     const body = JSON.stringify(obj);
 
     let headers = new Headers({ 'Content-Type': 'application/json;charset=utf-8' });
