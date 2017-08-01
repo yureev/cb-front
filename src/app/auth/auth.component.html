@@ -4,21 +4,21 @@
     <div class="auth__container__logo">
       <img src="./../../assets/image/logo_unexbank.png" alt="Logo" class="auth__container__logo_img">
     </div>
-    <form #authForm="ngForm" class="authForm ng-pristine ng-untouched ng-valid" novalidate="">
+    <form #authForm="ngForm" class="authForm ng-pristine ng-untouched ng-valid" novalidate (ngSubmit)="onSubmit(authForm)">
       <div class="auth__container__text">
         Введіть логін та пароль:
       </div>
       <ul class="auth__container__list">
         <li class="auth__container__item">
           <img src="./../../assets/image/auth_user.png" alt="user" class="auth__container__item_img">
-          <input class="auth__container__item_login" placeholder="Логін" [ngModel]="authLogin" name="authLogin" required>
+          <input class="auth__container__item_login" placeholder="Логін" ngModel name="authLogin" required />
         </li>
         <li class="auth__container__item">
           <img src="./../../assets/image/auth_lock.png" alt="lock" class="auth__container__item_img">
-          <input type="password" class="auth__container__item_pass" placeholder="Пароль" [ngModel]="authPass" name="authPass" required>
+          <input type="password" class="auth__container__item_pass" placeholder="Пароль" ngModel name="authPass" required />
         </li>
         <li class="auth__container__item">
-          <input type="submit" [disabled]="authForm.invalid" routerLink="/role" class="auth__container__item_submit" value="Вхід">
+          <input type="submit" [disabled]="authForm.invalid" routerLink="/role" class="auth__container__item_submit" value="Вхід" />
         </li>
         <li class="auth__container__item">
           <a href="#" class="auth__container__item_link">Забули пароль?</a>
@@ -27,3 +27,7 @@
     </form>
   </div>
 </div>
+
+<!--<input type="submit" [disabled]="authForm.invalid" routerLink="/role" class="auth__container__item_submit" value="Вхід" />-->
+
+
