@@ -4,21 +4,23 @@
     <div class="auth__container__logo">
       <img src="./../../assets/image/logo_unexbank.png" alt="Logo" class="auth__container__logo_img">
     </div>
-    <form #authForm="ngForm" class="authForm ng-pristine ng-untouched ng-valid" novalidate (ngSubmit)="onSubmit(authForm)">
+    <form #authForm="ngForm" class="authForm ng-pristine ng-untouched ng-valid" novalidate (ngSubmit)="authForm.form.valid && onSubmit(authForm)">
       <div class="auth__container__text">
         Введіть логін та пароль:
       </div>
-      <ul class="auth__container__list">
-        <li class="auth__container__item">
+      <ul class="auth__container__list" >
+        <li class="auth__container__item" >
           <img src="./../../assets/image/auth_user.png" alt="user" class="auth__container__item_img">
           <input class="auth__container__item_login" placeholder="Логін" ngModel name="authLogin" required />
+          <!--<div *ngIf="!!authForm.form.controls.authLogin.touched && !authForm.form.controls.authLogin.valid" class="auth__container__item_error">Login is required</div>-->
         </li>
         <li class="auth__container__item">
           <img src="./../../assets/image/auth_lock.png" alt="lock" class="auth__container__item_img">
           <input type="password" class="auth__container__item_pass" placeholder="Пароль" ngModel name="authPass" required />
+          <!--<div *ngIf="!!authForm.form.controls.authPass.touched && !authForm.form.controls.authPass.valid" class="auth__container__item_error">Password is required</div>-->
         </li>
         <li class="auth__container__item">
-          <input type="submit" [disabled]="authForm.invalid" (click)="goRole()" class="auth__container__item_submit" value="Вхід" />
+          <input type="submit" [disabled]="authForm.invalid" class="auth__container__item_submit" value="Вхід" />
         </li>
         <li class="auth__container__item">
           <a href="#" class="auth__container__item_link">Забули пароль?</a>
@@ -28,6 +30,5 @@
   </div>
 </div>
 
-<!--<input type="submit" [disabled]="authForm.invalid" routerLink="/role" class="auth__container__item_submit" value="Вхід" />-->
 
 

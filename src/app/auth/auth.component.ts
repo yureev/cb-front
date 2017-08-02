@@ -13,13 +13,7 @@ export class AuthComponent {
 
   constructor(private authService: AuthService, private router: Router) {}
   onSubmit( form: NgForm) {
-    console.log('NgForm', form.value.authLogin, form.value.authPass);
     this.authService.userAuth(form.value.authLogin, form.value.authPass);
-  }
-
-  goRole() {
-
-    this.router.navigate(['/role']);
   }
 }
 

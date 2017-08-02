@@ -7,7 +7,7 @@
   .auth .auth__container {
     background: #ffffff;
     width: 350px;
-    height: 315px;
+    height: 350px;
     padding: 10px 25px;
     text-align: center;
     box-shadow: 0px 8px 18px 0 rgba(168, 175, 170, 0.71);
@@ -33,7 +33,8 @@
       margin-bottom: 10px;
       padding-bottom: 5px; }
     .auth .auth__container .auth__container__list .auth__container__item {
-      margin-bottom: 10px; }
+      margin-bottom: 10px;
+      height: 40px; }
       .auth .auth__container .auth__container__list .auth__container__item .auth__container__item_img {
         vertical-align: bottom;
         width: 7%; }
@@ -60,6 +61,11 @@
         color: #ffffff;
         font-weight: bold;
         font-size: 18px; }
+      .auth .auth__container .auth__container__list .auth__container__item .auth__container__item_error {
+        font-size: 12px;
+        color: #cb3137; }
+      .auth .auth__container .auth__container__list .auth__container__item .has-error {
+        border: 1px solid red; }
       .auth .auth__container .auth__container__list .auth__container__item .auth__container__item_link {
         color: #cb3137;
         text-decoration: underline; }

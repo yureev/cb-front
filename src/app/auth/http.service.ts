@@ -21,4 +21,10 @@ export class HttpService {
       .map((resp: Response) => resp.json())
       .catch((error: any) => {return Observable.throw(error);});
   }
+  getAuthInfo(str: string) {
+
+    return this.http.get('https://cb.redeye.software/auth/info?token=' + str)
+      .map((resp: Response) => resp.json())
+      .catch((error: any) => {return Observable.throw(error);});
+  }
 }

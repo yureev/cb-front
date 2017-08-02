@@ -3,23 +3,31 @@
     <div class="role__header__logo">
       <img src="./../../assets/image/logo_unexbank.png" alt="Logo" class="role__header__logo_img">
     </div>
-    <div class="role__header__logo__search">
-      <form action="" class="role__header__logo__search_form">
-        <input type="text" class="role__header__logo__search_input" placeholder="ПОШУК">
-        <span class="role__header__logo__search__submit"><i class="fa fa-search" aria-hidden="true"></i></span>
+    <div class="role__header__search">
+      <form action="" class="role__header__search_form">
+        <input type="text" class="role__header__search_input" placeholder="ПОШУК">
+        <a class="role__header__search__submit"><i class="fa fa-search" aria-hidden="true" (click)="searchClient=!searchClient"></i></a>
+        <div *ngIf="searchClient" class="role__header__search__client" >
+          <ul class="role__header__search__client__list">
+            <li class="role__header__search__client__item">Пошук заявки</li>
+            <li class="role__header__search__client__item">Пошук клієнта</li>
+          </ul>
+        </div>
       </form>
+
     </div>
+
   </header>
   <section class="role__container">
     <aside class="role__container__aside">
       <div class="role__container__aside__id">
         <div class="role__container__aside__id__up">
-          <img src="" alt="Photo" class="role__container__aside__id__up_photo">
+          <img src="./../../assets/image/manager.jpg" alt="Photo" class="role__container__aside__id__up_photo">
           <div class="role__container__aside__id__up__name">
-            <span class="role__container__aside__id__up__name_text">Manager Lorem</span>
+            <span class="role__container__aside__id__up__name_text">{{rolename}} {{name}}</span>
           </div>
         </div>
-        <button class="role__container__aside__id_button">Вихід</button>
+        <a class="role__container__aside__id_button" (click)="logout()">Вихід</a>
       </div>
       <button class="role__container__aside_button">Створити заявку</button>
       <ul class="role__container__aside__list">
