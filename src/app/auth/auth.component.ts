@@ -6,21 +6,23 @@ import { Apollo } from 'apollo-angular';
 import gql from 'graphql-tag';
 import { ApolloClient, createNetworkInterface } from 'apollo-client';
 
-const CurrentUserForProfile = gql`
- query {
-    customer(idCode: "2588310454") {
+// const getGraphql = gql`
+//  query {
+//     customer(idCode: "2588310454") {
+//     id
+//     name
+//   }
+//   }
+// `;
+
+const getGraphql = gql`
+ query getGraphql($idCode: String) {
+    customer(idCode: $idCode) {
     id
     name
   }
   }
 `;
-
-
-// interface QueryResponse {
-//   currentUser
-//   loading
-// }
-
 
 @Component({
   selector: 'app-auth',
@@ -28,10 +30,9 @@ const CurrentUserForProfile = gql`
   styleUrls: ['./auth.component.sass'],
   providers: [ AuthService]
 })
-export class AuthComponent implements OnInit{
-  loading: boolean;
-  currentUser: any;
-  data: any;
+export class AuthComponent implements OnInit {
+  responce: any;
+
 
   constructor(private authService: AuthService, private router: Router, private apollo: Apollo) {}
   onSubmit( form: NgForm) {
@@ -45,32 +46,27 @@ export class AuthComponent implements OnInit{
     //   // this.loading = data.loading;
     //   // this.currentUser = data.currentUser;
     // });
+
+    let variab = "2217606611";
+
     this.apollo.query({
-      query: gql`query getAllPosts {
-        customer (idCode: "2588310454"){
-          id
-          name
-        }
-      }`
-    }).subscribe(({data, loading}) => {
-      // this.apollo.query({
-      //   query: gql`query getAllPosts {
-      //   customer (idCode: "2588310454"){
-      //     id
-      //     name
-      //   }
-      // }`
-      // }).subscribe(({data, loading}) => {
-      //   console.log(1);
-      //   this.data = data;
-      //   this.loading = loading;
-      //   console.log('dssdsd', this.data);
-      // });
-      console.log(1);
-      this.data = data;
-      this.loading = loading;
-      console.log('dssdsd', this.data);
+      query: getGraphql,
+      variables: {
+        idCode: variab
+      }
+    }).subscribe((res) => {
+      this.responce = res;
+      console.log('name', this.responce.data.customer.name);
     });
+
+
+    // this.apollo.query({
+    //   query: getGraphql
+    // }).subscribe((res) => {
+    //   console.log(1);
+    //   this.responce = res;
+    //   console.log('name', this.responce.data.customer.name);
+    // });
   }
 }
 
