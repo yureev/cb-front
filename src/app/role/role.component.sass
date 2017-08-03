@@ -71,18 +71,74 @@
         z-index: 2
         box-shadow: 0px 8px 18px 0 rgba(168, 175, 170, 0.71)
         padding: 25px 15px
+        width: 650px
+        border-bottom-left-radius: 10px
+        border-bottom-right-radius: 10px
 
         .role__header__search__client__list
-          border-bottom: 1px solid #e1e1e1
           @include clearfix()
+
+          .role__header__search__client__item:active
+            background-color: #ffffff
+            color: #000000
+            border-bottom: none
 
           .role__header__search__client__item
             padding: 20px 15px
             font-size: 12px
-            border: 1px solid #e1e1e1
+            border: solid 1px #e1e1e1
             float: left
-            width: 50%
-            @include border-radius(5px)
+            border-top-left-radius: 10px
+            border-top-right-radius: 10px
+            background-color: #b9b9b9
+            color: #ffffff
+
+        .role__header__search__field-client
+          font-size: 13px
+          padding: 25px 0
+
+          .role__header__search__field-client__list
+
+            .role__header__search__field-client__item:last-child
+              text-align: center
+
+
+            .role__header__search__field-client__item
+              margin-bottom: 10px
+
+              input
+                height: 28px
+                background-color: #f2f2f2
+                border: solid 1px #e3e3e3
+                @include border-radius(4px)
+                padding: 0 7px
+                font-size: 16px
+
+              .role__header__search__field-client__item__passport_input-series
+                width: 55px
+                text-align: center
+
+              .role__header__search__field-client__item__passport_input-number
+                width: 95px
+                text-align: center
+
+              .role__header__search__field-client__item_radio
+                height: 16px
+                margin: 0
+
+              .role__header__search__field-client__item_button
+                height: 40px
+                background: #419562
+                color: #ffffff
+                font-size: 18px
+                font-weight: bold
+                box-shadow: 0 5px 13px 0 rgba(15, 171, 75, 0.35)
+                @include border-radius(20px)
+                margin: 10px 0
+                padding: 0 40px
+                cursor: pointer
+
+
 
 
   .role__container
@@ -133,6 +189,7 @@
           background: #ffffff
           font-size: 13px
           padding: 0 10px
+          cursor: pointer
 
       .role__container__aside_button
         height: 40px
@@ -143,6 +200,8 @@
         box-shadow: 0 5px 13px 0 rgba(15, 171, 75, 0.35)
         @include border-radius(20px)
         margin: 10px 0
+        padding: 0 20px
+        cursor: pointer
 
       .role__container__aside__list
         padding: 10px 0
@@ -254,6 +313,147 @@
             .main__table__body_td
               padding: 25px 15px
               border-bottom: 1px solid #dee1e2
+
+      .aplication
+        .aplication__list
+          @include clearfix()
+
+          .aplication__item:active
+            background-color: #ffffff
+            border-bottom: none
+
+
+          .aplication__item
+            float: left
+            width: 14.28%
+            height: 55px
+            text-align: center
+            padding: 0 15px
+            font-size: 12px
+            border-top-left-radius: 10px
+            border-top-right-radius: 10px
+            background-color: #b9b9b9
+            color: #000000
+            font-weight: bold
+            border: solid 1px #e1e1e1
+            position: relative
+            line-height: 55px
+            span
+              display: inline-block /* центрировать..*/
+              vertical-align: middle  /* ..по вертикали */
+              line-height: 1.25
+
+        .aplication__photo-cont
+          padding: 28px 0
+          @include clearfix()
+          border-bottom: 1px solid #e1e1e1
+          .aplication__photo-cont__photo
+            width: 87px
+            height: 87px
+            float: left
+            @include border-radius(10px)
+            background-color: #dfdfdf
+            text-align: center
+            .aplication__photo-cont__photo_img
+              width: 87px
+              height: 87px
+              @include border-radius(10px)
+
+          .aplication__photo-cont__list
+            position: relative
+            @include clearfix()
+            .aplication__photo-cont__item:first-child
+              right: 140px
+            .aplication__photo-cont__item:last-child
+              right: 0
+            .aplication__photo-cont__item
+              margin-left: 5px
+              position: absolute
+              bottom: 0
+              .aplication__photo-cont_button
+                background-color: #9f9f9f
+                @include border-radius(10px)
+                color: #ffffff
+                width: 135px
+                text-align: left
+                font-weight: bold
+                font-size: 14px
+                padding: 7px
+
+        .aplication__questionary
+          .aplication__questionary__head
+            margin-top: 20px
+            .aplication__questionary__head__list
+              @include clearfix()
+              .aplication__questionary__head__item__title
+                float: left
+                width: 10%
+                font-weight: bold
+              .aplication__questionary__head__item__line
+                width: 75%
+                float: left
+              .aplication__questionary__head__item__button
+                float: right
+                width: 15%
+                .aplication__questionary__head__item__button_btn
+                  background-color: #9f9f9f
+                  @include border-radius(10px)
+                  color: #ffffff
+                  width: 100%
+                  text-align: center
+                  font-weight: bold
+                  font-size: 14px
+                  padding: 7px
+
+          .aplication__questionary_borrow
+            margin-top: 20px
+            margin-left: 40px
+            .aplication__questionary_borrow__list
+              @include clearfix()
+              position: relative
+              .aplication__questionary_borrow__item__title
+                float: left
+                width: 10%
+                font-weight: bold
+                font-size: 14px
+              .aplication__questionary_borrow__item__line
+                width: 75%
+                float: left
+              .aplication__questionary_borrow__item__button
+                //float: right
+                position: absolute
+                right: 0
+                .aplication__questionary_borrow__item__button_btn
+                  width: 100%
+                  text-align: center
+                  font-size: 14px
+
+            .aplication__questionary_borrow__cont__list
+              margin-top: 20px
+              .aplication__questionary_borrow__cont__item
+                margin-bottom: 10px
+                .aplication__questionary_borrow__cont__text
+                  display: inline-block
+                  width: 21%
+                  font-size: 13px
+                  margin-right: 10px
+
+                .aplication__questionary_borrow__cont__input
+                  height: 28px
+                  width: 190px
+                  background-color: #f2f2f2
+                  border: solid 1px #e3e3e3
+                  @include border-radius(4px)
+                  padding: 0 7px
+
+
+
+
+
+
+
+
+
 
 
 

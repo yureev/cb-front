@@ -11,6 +11,18 @@ import {HttpModule} from "@angular/http";
 import {AuthService} from "./auth/auth.service";
 import {HttpService} from "./auth/http.service";
 
+import { ApolloClient } from 'apollo-client';
+import { ApolloModule } from 'apollo-angular';
+import {platformBrowserDynamic} from "@angular/platform-browser-dynamic";
+import {provideClient} from "./auth/graphql.client";
+
+
+// const client = new ApolloClient();
+// export function provideClient(): ApolloClient {
+//   return client;
+// }
+
+
 // определение маршрутов
 const appRoutes: Routes = [
   { path: '', component: AuthComponent},
@@ -20,9 +32,11 @@ const appRoutes: Routes = [
 ];
 
 @NgModule({
-  imports:      [ BrowserModule, RouterModule.forRoot(appRoutes), FormsModule, HttpModule ],
-  declarations: [ AppComponent, AuthComponent, RoleComponent ],
+  imports:      [ BrowserModule, RouterModule.forRoot(appRoutes), FormsModule, HttpModule, ApolloModule.forRoot(provideClient) ],
+  declarations: [ AppComponent, AuthComponent, RoleComponent],
   bootstrap:    [ AppComponent ],
   providers:    [ AuthGuard, AuthService, HttpService ]
 })
 export class AppModule { }
+
+platformBrowserDynamic().bootstrapModule(AppModule);
