@@ -97,7 +97,7 @@
       </ul>
     </aside>
     <main class="role__container__main">
-      <section class="first" *ngIf="false">
+      <section class="first" *ngIf="sectionVar=='first'">
         <table class="main__table">
           <thead class="main__table__head">
           <tr >
@@ -224,7 +224,7 @@
           </tbody>
         </table>
       </section>
-      <section class="aplication" *ngIf="true">
+      <section class="aplication" *ngIf="sectionVar=='aplication'">
         <div class="aplication_title">Заявка №123</div>
         <ul class="aplication__list">
           <li class="aplication__item">
@@ -254,14 +254,90 @@
             <img src="" alt="Photo" class="aplication__photo-cont__photo_img">
           </div>
           <ul class="aplication__photo-cont__list">
-
-            <li class="aplication__photo-cont__item">
-              <button class="aplication__photo-cont_button"><i class="fa fa-plus" aria-hidden="true"></i> Розгорнути все</button>
-            </li>
             <li class="aplication__photo-cont__item">
               <button class="aplication__photo-cont_button"><i class="fa fa-minus" aria-hidden="true"></i> Згорнути все</button>
             </li>
+            <li class="aplication__photo-cont__item">
+              <button class="aplication__photo-cont_button"><i class="fa fa-plus" aria-hidden="true"></i> Розгорнути все</button>
+            </li>
+
           </ul>
+        </div>
+        <div class="aplication__questionary">
+          <div class="aplication__questionary__head">
+            <ul class="aplication__questionary__head__list">
+              <li class="aplication__questionary__head__item__title">
+                <div class="aplication__questionary__head__title">
+                  Анкентні дані
+                </div>
+              </li>
+              <!--<li class="aplication__questionary__head__item__line">-->
+                <!--<div class="aplication__questionary__head__title">-->
+                  <!--<hr>-->
+                <!--</div>-->
+              <!--</li>-->
+              <li class="aplication__questionary__head__item__button">
+                <button class="aplication__questionary__head__item__button_btn"><i class="fa fa-plus" aria-hidden="true"></i> Розгорнути</button>
+              </li>
+            </ul>
+          </div>
+          <div class="aplication__questionary_borrow">
+            <ul class="aplication__questionary_borrow__list">
+              <li class="aplication__questionary_borrow__item__title">
+                <div class="aplication__questionary_borrow__title">
+                  Позичальник
+                </div>
+              </li>
+              <!--<li class="aplication__questionary_borrow__item__line">-->
+              <!--<div class="aplication__questionary_borrow__title">-->
+              <!--<hr>-->
+              <!--</div>-->
+              <!--</li>-->
+              <li class="aplication__questionary_borrow__item__button">
+                <a class="aplication__questionary_borrow__item__button_btn"><i class="fa fa-chevron-up" aria-hidden="true"></i></a>
+              </li>
+            </ul>
+
+            <ul class="aplication__questionary_borrow__cont__list">
+              <li class="aplication__questionary_borrow__cont__item">
+                <span class="aplication__questionary_borrow__cont__text">Прізвище:</span>
+                <input type="text" class="aplication__questionary_borrow__cont__input" [(ngModel)]="lastName">
+              </li>
+              <li class="aplication__questionary_borrow__cont__item">
+                <span class="aplication__questionary_borrow__cont__text">Ім'я:</span>
+                <input type="text" class="aplication__questionary_borrow__cont__input" [(ngModel)]="firstName">
+              </li>
+              <li class="aplication__questionary_borrow__cont__item">
+                <span class="aplication__questionary_borrow__cont__text">По-батькові:</span>
+                <input type="text" class="aplication__questionary_borrow__cont__input" [(ngModel)]="middleName">
+              </li>
+              <li class="aplication__questionary_borrow__cont__item">
+                <span class="aplication__questionary_borrow__cont__text">Ідентифікаційний номер:</span>
+                <input type="text" class="aplication__questionary_borrow__cont__input" [(ngModel)]="idCode">
+              </li>
+              <li class="aplication__questionary_borrow__cont__item">
+                <span class="aplication__questionary_borrow__cont__text">Сімейний стан:</span>
+                <input type="text" class="aplication__questionary_borrow__cont__input" [(ngModel)]="maritalStatusName">
+              </li>
+              <li class="aplication__questionary_borrow__cont__item">
+                <span class="aplication__questionary_borrow__cont__text">Кількість дітей:</span>
+                <input type="text" class="aplication__questionary_borrow__cont__input" [(ngModel)]="dependants">
+              </li>
+              <li class="aplication__questionary_borrow__cont__item">
+                <span class="aplication__questionary_borrow__cont__text">В т.ч. дітей віком до 18 років:</span>
+                <input type="text" class="aplication__questionary_borrow__cont__input" [(ngModel)]="dependantsUnder18">
+              </li>
+              <li class="aplication__questionary_borrow__cont__item">
+                <span class="aplication__questionary_borrow__cont__text">Кількість інших осіб на утриманні:</span>
+                <input type="text" class="aplication__questionary_borrow__cont__input" [(ngModel)]="dependantsOther">
+              </li>
+              <li class="aplication__questionary_borrow__cont__item">
+                <span class="aplication__questionary_borrow__cont__text">Освіта:</span>
+                <input type="text" class="aplication__questionary_borrow__cont__input" [(ngModel)]="educationName">
+              </li>
+            </ul>
+          </div>
+
         </div>
       </section>
 

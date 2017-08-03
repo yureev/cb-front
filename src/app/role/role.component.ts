@@ -8,7 +8,19 @@ const getGraphql = gql`
  query getGraphql($idCode: String) {
     customer(idCode: $idCode) {
     id
-    name
+    lastName
+    firstName
+    middleName
+    okpo
+    maritalStatusId
+    maritalStatusName
+    dependants
+    dependantsUnder18
+    dependantsOther
+    educationId
+    educationName
+    isDpa
+    isNoOkpo
   }
   }
 `;
@@ -23,6 +35,22 @@ export class RoleComponent implements OnInit {
   rolename = localStorage.getItem('rolename');
   responce: any;
   searchClient: boolean;
+  sectionVar: string;
+  lastName: string;
+  firstName: string;
+  middleName: string;
+  okpo: string;
+  maritalStatusId: string;
+  maritalStatusName: string;
+  dependants: string;
+  dependantsUnder18: string;
+  dependantsOther: string;
+  educationId: string;
+  educationName: string;
+  isDpa: string;
+  isNoOkpo: string;
+  idCode: string;
+
 
   constructor(private authService: AuthService, private apollo: Apollo) {}
     logout() {
@@ -34,16 +62,14 @@ export class RoleComponent implements OnInit {
     // let variab = "2217606611";
     let variab2 = form.value.ipnNumber;
 
-    console.log(variab2);
-
     this.apollo.query({
       query: getGraphql,
       variables: {
         idCode: variab2
       }
     }).subscribe((res) => {
-      this.responce = res;
-      console.log('name', this.responce.data.customer.name);
+      // this.responce = res;
+      // console.log('name', this.responce.data.customer);
     });
 
     setTimeout(() => {
@@ -53,16 +79,25 @@ export class RoleComponent implements OnInit {
           idCode: variab2
         }
       }).subscribe((res) => {
-
-        console.log(res);
+        this.searchClient = false;
         this.responce = res;
-        console.log('name', this.responce.data.customer.name);
+        this.firstName = this.responce.data.customer.firstName;
+        this.lastName = this.responce.data.customer.lastName;
+        this.middleName = this.responce.data.customer.middleName;
+        this.educationName = this.responce.data.customer.educationName;
+        this.dependantsOther = this.responce.data.customer.dependantsOther;
+        this.dependants = this.responce.data.customer.dependants;
+        this.dependantsUnder18 = this.responce.data.customer.dependantsUnder18;
+        this.maritalStatusName = this.responce.data.customer.maritalStatusName;
+        this.idCode = variab2;
+        this.sectionVar = 'aplication';
       });
     }, 2000);
   }
 
   ngOnInit() {
     this.searchClient = false;
+    this.sectionVar = 'first';
   }
 
 }

@@ -305,7 +305,8 @@
         vertical-align: middle;
         line-height: 1.25; }
     .role .role__container .role__container__main .aplication .aplication__photo-cont {
-      padding: 28px 0; }
+      padding: 28px 0;
+      border-bottom: 1px solid #e1e1e1; }
       .role .role__container .role__container__main .aplication .aplication__photo-cont:before, .role .role__container .role__container__main .aplication .aplication__photo-cont:after {
         content: "";
         display: table; }
@@ -328,25 +329,105 @@
           -moz-border-radius: 10px;
           -ms-border-radius: 10px;
           border-radius: 10px; }
-      .role .role__container .role__container__main .aplication .aplication__photo-cont .aplication__photo-cont__list:before, .role .role__container .role__container__main .aplication .aplication__photo-cont .aplication__photo-cont__list:after {
+      .role .role__container .role__container__main .aplication .aplication__photo-cont .aplication__photo-cont__list {
+        position: relative; }
+        .role .role__container .role__container__main .aplication .aplication__photo-cont .aplication__photo-cont__list:before, .role .role__container .role__container__main .aplication .aplication__photo-cont .aplication__photo-cont__list:after {
+          content: "";
+          display: table; }
+        .role .role__container .role__container__main .aplication .aplication__photo-cont .aplication__photo-cont__list:after {
+          clear: both; }
+        .role .role__container .role__container__main .aplication .aplication__photo-cont .aplication__photo-cont__list .aplication__photo-cont__item:first-child {
+          right: 140px; }
+        .role .role__container .role__container__main .aplication .aplication__photo-cont .aplication__photo-cont__list .aplication__photo-cont__item:last-child {
+          right: 0; }
+        .role .role__container .role__container__main .aplication .aplication__photo-cont .aplication__photo-cont__list .aplication__photo-cont__item {
+          margin-left: 5px;
+          position: absolute;
+          bottom: 0; }
+          .role .role__container .role__container__main .aplication .aplication__photo-cont .aplication__photo-cont__list .aplication__photo-cont__item .aplication__photo-cont_button {
+            background-color: #9f9f9f;
+            -webkit-border-radius: 10px;
+            -moz-border-radius: 10px;
+            -ms-border-radius: 10px;
+            border-radius: 10px;
+            color: #ffffff;
+            width: 135px;
+            text-align: left;
+            font-weight: bold;
+            font-size: 14px;
+            padding: 7px; }
+    .role .role__container .role__container__main .aplication .aplication__questionary .aplication__questionary__head {
+      margin-top: 20px; }
+      .role .role__container .role__container__main .aplication .aplication__questionary .aplication__questionary__head .aplication__questionary__head__list:before, .role .role__container .role__container__main .aplication .aplication__questionary .aplication__questionary__head .aplication__questionary__head__list:after {
         content: "";
         display: table; }
-      .role .role__container .role__container__main .aplication .aplication__photo-cont .aplication__photo-cont__list:after {
+      .role .role__container .role__container__main .aplication .aplication__questionary .aplication__questionary__head .aplication__questionary__head__list:after {
         clear: both; }
-      .role .role__container .role__container__main .aplication .aplication__photo-cont .aplication__photo-cont__list .aplication__photo-cont__item {
+      .role .role__container .role__container__main .aplication .aplication__questionary .aplication__questionary__head .aplication__questionary__head__list .aplication__questionary__head__item__title {
+        float: left;
+        width: 10%;
+        font-weight: bold; }
+      .role .role__container .role__container__main .aplication .aplication__questionary .aplication__questionary__head .aplication__questionary__head__list .aplication__questionary__head__item__line {
+        width: 75%;
+        float: left; }
+      .role .role__container .role__container__main .aplication .aplication__questionary .aplication__questionary__head .aplication__questionary__head__list .aplication__questionary__head__item__button {
         float: right;
-        margin-left: 5px; }
-        .role .role__container .role__container__main .aplication .aplication__photo-cont .aplication__photo-cont__list .aplication__photo-cont__item .aplication__photo-cont_button {
+        width: 15%; }
+        .role .role__container .role__container__main .aplication .aplication__questionary .aplication__questionary__head .aplication__questionary__head__list .aplication__questionary__head__item__button .aplication__questionary__head__item__button_btn {
           background-color: #9f9f9f;
           -webkit-border-radius: 10px;
           -moz-border-radius: 10px;
           -ms-border-radius: 10px;
           border-radius: 10px;
           color: #ffffff;
-          width: 135px;
-          text-align: left;
+          width: 100%;
+          text-align: center;
           font-weight: bold;
           font-size: 14px;
           padding: 7px; }
+    .role .role__container .role__container__main .aplication .aplication__questionary .aplication__questionary_borrow {
+      margin-top: 20px;
+      margin-left: 40px; }
+      .role .role__container .role__container__main .aplication .aplication__questionary .aplication__questionary_borrow .aplication__questionary_borrow__list {
+        position: relative; }
+        .role .role__container .role__container__main .aplication .aplication__questionary .aplication__questionary_borrow .aplication__questionary_borrow__list:before, .role .role__container .role__container__main .aplication .aplication__questionary .aplication__questionary_borrow .aplication__questionary_borrow__list:after {
+          content: "";
+          display: table; }
+        .role .role__container .role__container__main .aplication .aplication__questionary .aplication__questionary_borrow .aplication__questionary_borrow__list:after {
+          clear: both; }
+        .role .role__container .role__container__main .aplication .aplication__questionary .aplication__questionary_borrow .aplication__questionary_borrow__list .aplication__questionary_borrow__item__title {
+          float: left;
+          width: 10%;
+          font-weight: bold;
+          font-size: 14px; }
+        .role .role__container .role__container__main .aplication .aplication__questionary .aplication__questionary_borrow .aplication__questionary_borrow__list .aplication__questionary_borrow__item__line {
+          width: 75%;
+          float: left; }
+        .role .role__container .role__container__main .aplication .aplication__questionary .aplication__questionary_borrow .aplication__questionary_borrow__list .aplication__questionary_borrow__item__button {
+          position: absolute;
+          right: 0; }
+          .role .role__container .role__container__main .aplication .aplication__questionary .aplication__questionary_borrow .aplication__questionary_borrow__list .aplication__questionary_borrow__item__button .aplication__questionary_borrow__item__button_btn {
+            width: 100%;
+            text-align: center;
+            font-size: 14px; }
+      .role .role__container .role__container__main .aplication .aplication__questionary .aplication__questionary_borrow .aplication__questionary_borrow__cont__list {
+        margin-top: 20px; }
+        .role .role__container .role__container__main .aplication .aplication__questionary .aplication__questionary_borrow .aplication__questionary_borrow__cont__list .aplication__questionary_borrow__cont__item {
+          margin-bottom: 10px; }
+          .role .role__container .role__container__main .aplication .aplication__questionary .aplication__questionary_borrow .aplication__questionary_borrow__cont__list .aplication__questionary_borrow__cont__item .aplication__questionary_borrow__cont__text {
+            display: inline-block;
+            width: 21%;
+            font-size: 13px;
+            margin-right: 10px; }
+          .role .role__container .role__container__main .aplication .aplication__questionary .aplication__questionary_borrow .aplication__questionary_borrow__cont__list .aplication__questionary_borrow__cont__item .aplication__questionary_borrow__cont__input {
+            height: 28px;
+            width: 190px;
+            background-color: #f2f2f2;
+            border: solid 1px #e3e3e3;
+            -webkit-border-radius: 4px;
+            -moz-border-radius: 4px;
+            -ms-border-radius: 4px;
+            border-radius: 4px;
+            padding: 0 7px; }
 
 /*# sourceMappingURL=role.component.css.map */

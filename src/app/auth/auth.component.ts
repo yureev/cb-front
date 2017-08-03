@@ -47,17 +47,17 @@ export class AuthComponent implements OnInit {
     //   // this.currentUser = data.currentUser;
     // });
 
-    let variab = "2217606611";
-
-    this.apollo.query({
-      query: getGraphql,
-      variables: {
-        idCode: variab
-      }
-    }).subscribe((res) => {
-      this.responce = res;
-      console.log('name', this.responce.data.customer.name);
-    });
+    // let variab = "2217606611";
+    //
+    // this.apollo.query({
+    //   query: getGraphql,
+    //   variables: {
+    //     idCode: variab
+    //   }
+    // }).subscribe((res) => {
+    //   this.responce = res;
+    //   console.log('name', this.responce.data.customer.name);
+    // });
 
 
     // this.apollo.query({
