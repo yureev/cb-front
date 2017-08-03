@@ -4,7 +4,7 @@
       <img src="./../../assets/image/logo_unexbank.png" alt="Logo" class="role__header__logo_img">
     </div>
     <div class="role__header__search">
-      <form action="" class="role__header__search_form">
+      <!--<form action="" class="role__header__search_form">-->
         <input type="text" class="role__header__search_input" placeholder="ПОШУК">
         <a class="role__header__search__submit"><i class="fa fa-search" aria-hidden="true" (click)="searchClient=!searchClient"></i></a>
         <div *ngIf="searchClient" class="role__header__search__client" >
@@ -12,8 +12,30 @@
             <li class="role__header__search__client__item">Пошук заявки</li>
             <li class="role__header__search__client__item">Пошук клієнта</li>
           </ul>
+          <div class="role__header__search__field-client">
+            <form #searchClient="ngForm" class="searchClient ng-pristine ng-untouched ng-valid" novalidate (ngSubmit)="searchClient.form.valid && onSubmit(searchClient)">
+              <ul class="role__header__search__field-client__list">
+                <li class="role__header__search__field-client__item">
+                  <div class="role__header__search__field-client__item__ipn">
+                    <input class="role__header__search__field-client__item_radio" name="ipn_passport" type="radio" value="ipn" checked>
+                    ІПН постачальника: <input class="role__header__search__field-client__item__ipn_input-ipn" ngModel name="ipnNumber" maxlength="10" required />
+                  </div>
+                </li>
+                <li class="role__header__search__field-client__item">
+                  <div class="role__header__search__field-client__item__passport">
+                    <input class="role__header__search__field-client__item_radio" name="ipn_passport" type="radio" value="passport">
+                    Серія паспорта: <input class="role__header__search__field-client__item__passport_input-series"  ngModel name="seriesPass" maxlength="2"/>
+                    Номер паспорта: <input class="role__header__search__field-client__item__passport_input-number"  ngModel name="numPass" maxlength="6"/>
+                  </div>
+                </li>
+                <li class="role__header__search__field-client__item">
+                  <button class="role__header__search__field-client__item_button" type="submit" [disabled]="searchClient.invalid"><i class="fa fa-search" aria-hidden="true" ></i> Знайти</button>
+                </li>
+              </ul>
+            </form>
+          </div>
         </div>
-      </form>
+      <!--</form>-->
 
     </div>
 
@@ -75,8 +97,9 @@
       </ul>
     </aside>
     <main class="role__container__main">
-      <table class="main__table">
-        <thead class="main__table__head">
+      <section class="first" *ngIf="false">
+        <table class="main__table">
+          <thead class="main__table__head">
           <tr >
             <th class="main__table__head__th">
               <span class="main__table__head__th_text">Номер заявки</span>
@@ -106,8 +129,8 @@
               <span class="main__table__head__th_text">Статус</span>
             </th>
           </tr>
-        </thead>
-        <tbody class="main__table__body">
+          </thead>
+          <tbody class="main__table__body">
           <tr>
             <td class="main__table__body_td">
               <span class="main__table__body__td_text">1</span>
@@ -198,8 +221,50 @@
             </td>
           </tr>
 
-        </tbody>
-      </table>
+          </tbody>
+        </table>
+      </section>
+      <section class="aplication" *ngIf="true">
+        <div class="aplication_title">Заявка №123</div>
+        <ul class="aplication__list">
+          <li class="aplication__item">
+            <span>Заявка</span>
+          </li>
+          <li class="aplication__item">
+            <span>Фінансовий стан позичальник</span>
+          </li>
+          <li class="aplication__item">
+            <span>Чек-лист веріфактора</span>
+          </li>
+          <li class="aplication__item">
+            <span>Кредитне рішення андерайтера</span>
+          </li>
+          <li class="aplication__item">
+            <span>Кредитне рішення кредитного комітет</span>
+          </li>
+          <li class="aplication__item">
+            <span>Друк</span>
+          </li>
+          <li class="aplication__item">
+            <span>Завантаження</span>
+          </li>
+        </ul>
+        <div class="aplication__photo-cont">
+          <div class="aplication__photo-cont__photo">
+            <img src="" alt="Photo" class="aplication__photo-cont__photo_img">
+          </div>
+          <ul class="aplication__photo-cont__list">
+
+            <li class="aplication__photo-cont__item">
+              <button class="aplication__photo-cont_button"><i class="fa fa-plus" aria-hidden="true"></i> Розгорнути все</button>
+            </li>
+            <li class="aplication__photo-cont__item">
+              <button class="aplication__photo-cont_button"><i class="fa fa-minus" aria-hidden="true"></i> Згорнути все</button>
+            </li>
+          </ul>
+        </div>
+      </section>
+
     </main>
   </section>
 </div>

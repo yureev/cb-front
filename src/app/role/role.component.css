@@ -65,24 +65,68 @@
         background-color: #ffffff;
         z-index: 2;
         box-shadow: 0px 8px 18px 0 rgba(168, 175, 170, 0.71);
-        padding: 25px 15px; }
-        .role .role__header .role__header__search .role__header__search__client .role__header__search__client__list {
-          border-bottom: 1px solid #e1e1e1; }
-          .role .role__header .role__header__search .role__header__search__client .role__header__search__client__list:before, .role .role__header .role__header__search .role__header__search__client .role__header__search__client__list:after {
-            content: "";
-            display: table; }
-          .role .role__header .role__header__search .role__header__search__client .role__header__search__client__list:after {
-            clear: both; }
-          .role .role__header .role__header__search .role__header__search__client .role__header__search__client__list .role__header__search__client__item {
-            padding: 20px 15px;
-            font-size: 12px;
-            border: 1px solid #e1e1e1;
-            float: left;
-            width: 50%;
-            -webkit-border-radius: 5px;
-            -moz-border-radius: 5px;
-            -ms-border-radius: 5px;
-            border-radius: 5px; }
+        padding: 25px 15px;
+        width: 650px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px; }
+        .role .role__header .role__header__search .role__header__search__client .role__header__search__client__list:before, .role .role__header .role__header__search .role__header__search__client .role__header__search__client__list:after {
+          content: "";
+          display: table; }
+        .role .role__header .role__header__search .role__header__search__client .role__header__search__client__list:after {
+          clear: both; }
+        .role .role__header .role__header__search .role__header__search__client .role__header__search__client__list .role__header__search__client__item:active {
+          background-color: #ffffff;
+          color: #000000;
+          border-bottom: none; }
+        .role .role__header .role__header__search .role__header__search__client .role__header__search__client__list .role__header__search__client__item {
+          padding: 20px 15px;
+          font-size: 12px;
+          border: solid 1px #e1e1e1;
+          float: left;
+          border-top-left-radius: 10px;
+          border-top-right-radius: 10px;
+          background-color: #b9b9b9;
+          color: #ffffff; }
+        .role .role__header .role__header__search .role__header__search__client .role__header__search__field-client {
+          font-size: 13px;
+          padding: 25px 0; }
+          .role .role__header .role__header__search .role__header__search__client .role__header__search__field-client .role__header__search__field-client__list .role__header__search__field-client__item:last-child {
+            text-align: center; }
+          .role .role__header .role__header__search .role__header__search__client .role__header__search__field-client .role__header__search__field-client__list .role__header__search__field-client__item {
+            margin-bottom: 10px; }
+            .role .role__header .role__header__search .role__header__search__client .role__header__search__field-client .role__header__search__field-client__list .role__header__search__field-client__item input {
+              height: 28px;
+              background-color: #f2f2f2;
+              border: solid 1px #e3e3e3;
+              -webkit-border-radius: 4px;
+              -moz-border-radius: 4px;
+              -ms-border-radius: 4px;
+              border-radius: 4px;
+              padding: 0 7px;
+              font-size: 16px; }
+            .role .role__header .role__header__search .role__header__search__client .role__header__search__field-client .role__header__search__field-client__list .role__header__search__field-client__item .role__header__search__field-client__item__passport_input-series {
+              width: 55px;
+              text-align: center; }
+            .role .role__header .role__header__search .role__header__search__client .role__header__search__field-client .role__header__search__field-client__list .role__header__search__field-client__item .role__header__search__field-client__item__passport_input-number {
+              width: 95px;
+              text-align: center; }
+            .role .role__header .role__header__search .role__header__search__client .role__header__search__field-client .role__header__search__field-client__list .role__header__search__field-client__item .role__header__search__field-client__item_radio {
+              height: 16px;
+              margin: 0; }
+            .role .role__header .role__header__search .role__header__search__client .role__header__search__field-client .role__header__search__field-client__list .role__header__search__field-client__item .role__header__search__field-client__item_button {
+              height: 40px;
+              background: #419562;
+              color: #ffffff;
+              font-size: 18px;
+              font-weight: bold;
+              box-shadow: 0 5px 13px 0 rgba(15, 171, 75, 0.35);
+              -webkit-border-radius: 20px;
+              -moz-border-radius: 20px;
+              -ms-border-radius: 20px;
+              border-radius: 20px;
+              margin: 10px 0;
+              padding: 0 40px;
+              cursor: pointer; }
   .role .role__container:before, .role .role__container:after {
     content: "";
     display: table; }
@@ -136,7 +180,8 @@
         color: #ce1613;
         background: #ffffff;
         font-size: 13px;
-        padding: 0 10px; }
+        padding: 0 10px;
+        cursor: pointer; }
     .role .role__container .role__container__aside .role__container__aside_button {
       height: 40px;
       background: #419562;
@@ -148,7 +193,9 @@
       -moz-border-radius: 20px;
       -ms-border-radius: 20px;
       border-radius: 20px;
-      margin: 10px 0; }
+      margin: 10px 0;
+      padding: 0 20px;
+      cursor: pointer; }
     .role .role__container .role__container__aside .role__container__aside__list {
       padding: 10px 0; }
       .role .role__container .role__container__aside .role__container__aside__list .role__container__aside__item:hover {
@@ -230,5 +277,76 @@
         .role .role__container .role__container__main .main__table .main__table__body tr .main__table__body_td {
           padding: 25px 15px;
           border-bottom: 1px solid #dee1e2; }
+    .role .role__container .role__container__main .aplication .aplication__list:before, .role .role__container .role__container__main .aplication .aplication__list:after {
+      content: "";
+      display: table; }
+    .role .role__container .role__container__main .aplication .aplication__list:after {
+      clear: both; }
+    .role .role__container .role__container__main .aplication .aplication__list .aplication__item:active {
+      background-color: #ffffff;
+      border-bottom: none; }
+    .role .role__container .role__container__main .aplication .aplication__list .aplication__item {
+      float: left;
+      width: 14.28%;
+      height: 55px;
+      text-align: center;
+      padding: 0 15px;
+      font-size: 12px;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      background-color: #b9b9b9;
+      color: #000000;
+      font-weight: bold;
+      border: solid 1px #e1e1e1;
+      position: relative;
+      line-height: 55px; }
+      .role .role__container .role__container__main .aplication .aplication__list .aplication__item span {
+        display: inline-block;
+        vertical-align: middle;
+        line-height: 1.25; }
+    .role .role__container .role__container__main .aplication .aplication__photo-cont {
+      padding: 28px 0; }
+      .role .role__container .role__container__main .aplication .aplication__photo-cont:before, .role .role__container .role__container__main .aplication .aplication__photo-cont:after {
+        content: "";
+        display: table; }
+      .role .role__container .role__container__main .aplication .aplication__photo-cont:after {
+        clear: both; }
+      .role .role__container .role__container__main .aplication .aplication__photo-cont .aplication__photo-cont__photo {
+        width: 87px;
+        height: 87px;
+        float: left;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        border-radius: 10px;
+        background-color: #dfdfdf;
+        text-align: center; }
+        .role .role__container .role__container__main .aplication .aplication__photo-cont .aplication__photo-cont__photo .aplication__photo-cont__photo_img {
+          width: 87px;
+          height: 87px;
+          -webkit-border-radius: 10px;
+          -moz-border-radius: 10px;
+          -ms-border-radius: 10px;
+          border-radius: 10px; }
+      .role .role__container .role__container__main .aplication .aplication__photo-cont .aplication__photo-cont__list:before, .role .role__container .role__container__main .aplication .aplication__photo-cont .aplication__photo-cont__list:after {
+        content: "";
+        display: table; }
+      .role .role__container .role__container__main .aplication .aplication__photo-cont .aplication__photo-cont__list:after {
+        clear: both; }
+      .role .role__container .role__container__main .aplication .aplication__photo-cont .aplication__photo-cont__list .aplication__photo-cont__item {
+        float: right;
+        margin-left: 5px; }
+        .role .role__container .role__container__main .aplication .aplication__photo-cont .aplication__photo-cont__list .aplication__photo-cont__item .aplication__photo-cont_button {
+          background-color: #9f9f9f;
+          -webkit-border-radius: 10px;
+          -moz-border-radius: 10px;
+          -ms-border-radius: 10px;
+          border-radius: 10px;
+          color: #ffffff;
+          width: 135px;
+          text-align: left;
+          font-weight: bold;
+          font-size: 14px;
+          padding: 7px; }
 
 /*# sourceMappingURL=role.component.css.map */
