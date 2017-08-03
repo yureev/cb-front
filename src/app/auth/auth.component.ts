@@ -38,13 +38,13 @@ export class AuthComponent implements OnInit{
     this.authService.userAuth(form.value.authLogin, form.value.authPass);
   }
   ngOnInit() {
-    this.apollo.watchQuery({
-      query: CurrentUserForProfile
-    }).subscribe(({data}) => {
-      // console.log(data);
-      // this.loading = data.loading;
-      // this.currentUser = data.currentUser;
-    });
+    // this.apollo.watchQuery({
+    //   query: CurrentUserForProfile
+    // }).subscribe(({data}) => {
+    //   // console.log(data);
+    //   // this.loading = data.loading;
+    //   // this.currentUser = data.currentUser;
+    // });
     this.apollo.query({
       query: gql`query getAllPosts {
         customer (idCode: "2588310454"){
@@ -53,19 +53,19 @@ export class AuthComponent implements OnInit{
         }
       }`
     }).subscribe(({data, loading}) => {
-      this.apollo.query({
-        query: gql`query getAllPosts {
-        customer (idCode: "2588310454"){
-          id
-          name
-        }
-      }`
-      }).subscribe(({data, loading}) => {
-        console.log(1);
-        this.data = data;
-        this.loading = loading;
-        console.log('dssdsd', this.data);
-      });
+      // this.apollo.query({
+      //   query: gql`query getAllPosts {
+      //   customer (idCode: "2588310454"){
+      //     id
+      //     name
+      //   }
+      // }`
+      // }).subscribe(({data, loading}) => {
+      //   console.log(1);
+      //   this.data = data;
+      //   this.loading = loading;
+      //   console.log('dssdsd', this.data);
+      // });
       console.log(1);
       this.data = data;
       this.loading = loading;
