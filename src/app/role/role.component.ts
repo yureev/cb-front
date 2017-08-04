@@ -60,7 +60,7 @@ export class RoleComponent implements OnInit {
   onSubmit( form: NgForm) {
 
     // let variab = "2217606611";
-    let variab2 = form.value.ipnNumber;
+    const variab2 = form.value.ipnNumber;
 
     this.apollo.query({
       query: getGraphql,

@@ -1,9 +1,9 @@
-import {Injectable} from '@angular/core';
-import { HttpService} from './http.service';
+import { Injectable } from '@angular/core';
+import { HttpService } from './http.service';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/observable/throw';
-import {Router} from '@angular/router';
+import { Router } from '@angular/router';
 
 
 
